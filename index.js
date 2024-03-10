@@ -17,6 +17,14 @@ app.use((req,res,next)=>{
     next();
 });
 
+// Different type of request propeties
+// method, hostname, path, app, baseUrl
+app.use((req,res,next)=>{
+    console.log(req.method, req.hostname, req.path);
+   console.log(req.body);
+    next();
+});
+
 
 
 app.get("/",(req,res)=>{
